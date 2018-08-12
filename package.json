@@ -37,7 +37,7 @@
     "clean": "yarn rimraf \"dist/**/*\"",
     "lint": "yarn stylelint src/**/*.pcss",
     "dev": "yarn npm-run-all --parallel css:dev serve",
-    "build": "yarn clean && yarn lint && yarn css:build"
+    "build": "yarn npm-run-all clean lint css:build"
   },
   "repository": {
     "type": "git",
