@@ -1,8 +1,7 @@
 module.exports = {
   files: "./dist/pura.css",
   server: {
-    baseDir: 'playground',
-    index: "index.html",
+    baseDir: 'playground/',
     serveStaticOptions: {
       extensions: ["html", "css"]
     }
