@@ -1,16 +1,13 @@
 const elements = document.querySelectorAll('[data-pura]');
 
-const checkProp = function(item, prop) {
-  return item.style.getPropertyValue(`--${prop}`);
-}
-
-
 elements.forEach(function(item) {
   item.addEventListener('click', function(){
-    if(item.style.getPropertyValue('--pura-play-state') === '') {
+    const puraPlayState = item.style.getPropertyValue('--pura-play-state');
+
+    if(puraPlayState === '') {
       item.style.setProperty('--pura-play-state', 'paused');
     }
-    else if (item.style.getPropertyValue('--pura-play-state')=== 'paused') {
+    else if (puraPlayState === 'paused') {
       item.style.setProperty('--pura-play-state', '');
     }
   })
