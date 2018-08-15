@@ -4,10 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Pura.css Demo</title>
   <link rel="stylesheet" href="pura.css">
+
+  <style>
+    body {
+      margin: 0;
+    }
+
+    main {
+      display: grid;
+      place-items: center;
+      margin: 100px auto;
+      max-width: 40em;
+      grid-template-rows: repeat(auto-fit, minmax(1fr, 100px));
+      grid-row-gap: 40px;
+    }
+
+    [data-pura] {
+      width: 100px;
+      height: 100px;
+      background-color: #1c45fd;
+    }
+  </style>
 </head>
 <body>
-  Playground
+  <main>
+    <div data-pura="pulse"></div>
+    <div data-pura="rotate"></div>
+  </main>
+
+  <script src="./demo.js"></script>
 </body>
 </html>
