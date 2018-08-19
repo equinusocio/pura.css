@@ -2,12 +2,12 @@ const elements = document.querySelectorAll('[data-pura]');
 
 elements.forEach(function(item) {
   item.addEventListener('click', function(){
-    const puraPlayState = item.style.getPropertyValue('--pura-play-state');
+    const playState = item.style.getPropertyValue('--pura-play-state');
 
-    if(puraPlayState === '') {
+    if(playState === '') {
       item.style.setProperty('--pura-play-state', 'paused');
     }
-    else if (puraPlayState === 'paused') {
+    else if (playState === 'paused') {
       item.style.setProperty('--pura-play-state', '');
     }
   })
