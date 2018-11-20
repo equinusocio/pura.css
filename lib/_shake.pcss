@@ -1,6 +1,6 @@
 @keyframes pura-shake {
-  from,
-  to {
+  0%,
+  100% {
     transform: translate3d(0, 0, 0);
   }
 
@@ -9,21 +9,19 @@
   50%,
   70%,
   90% {
-    transform: translate3d(-10px, 0, 0);
+    transform: translate3d(calc(var(--pura-animation-offset, 10px) * -1), 0, 0);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translate3d(10px, 0, 0);
+    transform: translate3d(var(--pura-animation-offset, 10px), 0, 0);
   }
 }
 
 [data-pura='shake'] {
-  animation-play-state: var(--pura-play-state, unset);
   animation-name: pura-shake;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: var(--pura-timing-function, cubic-bezier(0.4, 0, 0.2, 1));
   animation-direction: alternate;
-  animation-iteration-count: 1;
 }

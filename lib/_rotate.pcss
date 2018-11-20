@@ -1,6 +1,6 @@
 @keyframes pura-rotate {
   0% {
-    transform: rotate(-1turn);
+    transform: rotate(calc(var(--pura-animation-turns, 1turn) * -1));
   }
 
   100% {
@@ -9,8 +9,8 @@
 }
 
 [data-pura='rotate'] {
-  animation-play-state: var(--pura-play-state, unset);
   animation-name: pura-rotate;
-  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-  animation-iteration-count: infinite;
+  animation-direction: var(--pura-animation-direction, unset);
+  animation-timing-function: var(--pura-timing-function, cubic-bezier(0.4, 0, 0.2, 1));
+  animation-iteration-count: var(--pura-iteration-count, infinite);
 }
