@@ -34,7 +34,7 @@
     "css:dev": "yarn postcss lib/pura.pcss -c postcss.config.js -o dist/pura.css --verbose -w",
     "css:build": "yarn postcss lib/pura.pcss -c postcss.config.js -o dist/pura.css --verbose",
     "serve": "yarn browser-sync start --config './browser-sync.js'",
-    "clean": "yarn rimraf \"dist/**/*\"",
+    "clean": "yarn rimraf 'dist/**/*'",
     "lint": "yarn stylelint src/**/*.pcss",
     "dev": "yarn npm-run-all --parallel css:dev serve",
     "build": "yarn npm-run-all clean lint css:build"
