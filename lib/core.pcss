@@ -1,0 +1,12 @@
+[data-pura] {
+  will-change: transform;
+  animation-play-state: var(--pura-play-state, running);
+  animation-duration: var(--pura-animation-duration, 1s);
+}
+
+@media (prefers-reduced-motion) {
+  [data-pura] {
+    animation: unset !important;
+    transition: none !important;
+  }
+}

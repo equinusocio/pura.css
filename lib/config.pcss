@@ -1,12 +1,7 @@
-[data-pura] {
-  will-change: transform;
-  animation-play-state: var(--pura-play-state, running);
-  animation-duration: var(--pura-animation-duration, 1s);
-}
+/* This file contains all the default
+ * static values used by animations and basic style */
 
-@media (prefers-reduced-motion) {
-  [data-pura] {
-    animation: unset !important;
-    transition: none !important;
-  }
-}
+/* Easings curves */
+$standard-curve: cubic-bezier(0.4, 0, 0.2, 1);
+$accelerate-curve: cubic-bezier(0.4, 0, 1, 1);
+$decelerate-curve: cubic-bezier(0, 0, 0.2, 1);
