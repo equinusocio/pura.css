@@ -1,8 +1,8 @@
-const elements = Array.from(document.querySelectorAll('[data-pura]'));
+const elements = [...document.querySelectorAll('[data-pura]')];
 
-const items = elements.map(item => {
-  item.addEventListener('click', () => {
-    const playState = item.style.getPropertyValue('--pura-play-state');
-    item.style.setProperty('--pura-play-state', !playState ? 'paused' : '');
-  })
-});
+const items = elements.map(item =>
+  item.addEventListener('click', () =>
+    item.style.setProperty('--pura-play-state', !!item.style.getPropertyValue('--pura-play-state')
+    ? ''
+    : 'paused'))
+);
