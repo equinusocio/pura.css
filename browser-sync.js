@@ -1,11 +1,14 @@
 module.exports = {
-  files: './dist/pura.css',
+  files: [
+    './dist/pura.css'
+  ],
   server: {
-    baseDir: 'test/',
+    baseDir: './',
     serveStaticOptions: {
-      extensions: ['html', 'css']
+      extensions: ['html', 'css', 'js']
     }
   },
+  startPath: "/test/index.html",
   open: true,
   injectChanges: true,
   notify: true
