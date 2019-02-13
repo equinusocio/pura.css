@@ -4,9 +4,9 @@ const elements = document.querySelectorAll('[data-pura]');
   item.addEventListener('click', function () {
     const playState = item.style.getPropertyValue('--pura-play-state');
 
-    if (playState === '') {
+    if (!playState) {
       item.style.setProperty('--pura-play-state', 'paused');
-    } else if (playState === 'paused') {
+    } else {
       item.style.setProperty('--pura-play-state', '');
     }
   })
