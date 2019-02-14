@@ -1,0 +1,22 @@
+@keyframes pura-rotate-scale {
+  0% {
+    opacity: var(--pura-opacity-from, 0);
+    transform: scale(1) rotateZ(-360deg);
+  }
+
+  50% {
+    opacity: var(--pura-opacity-to, 1);
+    transform: scale(2) rotateZ(-180deg);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+[data-pura='rotate-scale'] {
+  animation-name: pura-rotate-scale;
+  animation-timing-function: var(--pura-timing-function, linear);
+  animation-direction: alternate;
+  animation-iteration-count: var(--pura-iteration-count, 1);
+}
