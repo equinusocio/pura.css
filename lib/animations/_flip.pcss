@@ -1,0 +1,17 @@
+@keyframes pura-flip {
+  0% {
+    transform: rotateX(180deg);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+[data-pura='flip'] {
+  animation-name: pura-flip;
+  backface-visibility: hidden;
+  animation-direction: var(--pura-animation-direction, unset);
+  animation-timing-function: var(--pura-timing-function, $decelerate-curve);
+  animation-iteration-count: var(--pura-iteration-count, infinite);
+}

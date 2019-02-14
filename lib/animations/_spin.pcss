@@ -1,4 +1,4 @@
-@keyframes pura-rotate {
+@keyframes pura-spin {
   0% {
     transform: rotate(calc(var(--pura-animation-turns, 1turn) * -1));
   }
@@ -8,9 +8,9 @@
   }
 }
 
-[data-pura='rotate'] {
-  animation-name: pura-rotate;
+[data-pura='spin'] {
+  animation-name: pura-spin;
   animation-direction: var(--pura-animation-direction, unset);
-  animation-timing-function: var(--pura-timing-function, linear);
+  animation-timing-function: var(--pura-timing-function, $standard-curve);
   animation-iteration-count: var(--pura-iteration-count, infinite);
 }

@@ -11,6 +11,17 @@
   <style>
     body {
       margin: 0;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        Ubuntu,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol";
     }
 
     main {
@@ -26,6 +37,16 @@
       width: 100px;
       height: 100px;
       background-color: #1c45fd;
+      display: flex;
+      place-items: center;
+      place-content: center;
+      color: #FFF;
+    }
+
+    [data-pura]::before {
+      display: block;
+      content: attr(data-pura);
+      font-size: 0.8rem;
     }
 
     [data-pura="rotate-scale"] {
@@ -36,9 +57,13 @@
 <body>
   <main>
     <div data-pura="flash"></div>
+    <div data-pura="spin"></div>
     <div data-pura="rotate"></div>
     <div data-pura="shake"></div>
     <div data-pura="rotate-scale"></div>
+    <div style="perspective: 500px; transform-style: preserve-3d;">
+      <div data-pura="flip"></div>
+    </div>
   </main>
 
   <script src="./demo.js"></script>
