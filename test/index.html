@@ -11,6 +11,7 @@
   <style>
     body {
       margin: 0;
+      background-color: #070a18;
       font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -29,8 +30,8 @@
       place-items: center;
       margin: 100px auto;
       max-width: 40em;
-      grid-template-rows: repeat(auto-fit, minmax(1fr, 100px));
-      grid-row-gap: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-gap: 40px;
     }
 
     [data-pura] {
@@ -40,7 +41,7 @@
       display: flex;
       place-items: center;
       place-content: center;
-      color: #FFF;
+      color: #fff;
     }
 
     [data-pura]::before {
@@ -51,6 +52,11 @@
 
     [data-pura="rotate-scale"] {
       --pura-animation-duration: 650ms;
+    }
+
+    [data-pura='blur-in'] {
+      --pura-animation-duration: 350ms;
+      --pura-animation-x-offset: 1000px;
     }
   </style>
 </head>
@@ -64,6 +70,7 @@
     <div style="perspective: 500px; transform-style: preserve-3d;">
       <div data-pura="flip"></div>
     </div>
+    <div data-pura="blur-in"></div>
   </main>
 
   <script src="./demo.js"></script>
