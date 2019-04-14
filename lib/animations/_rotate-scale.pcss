@@ -1,7 +1,7 @@
 @keyframes pura-rotate-scale {
   0% {
     opacity: var(--pura-opacity-from, 0);
-    transform: scale(2) rotateZ(-360deg);
+    transform: scale(2) rotateZ(calc(var(--pura-rotate-from, 1turn) * -1));
   }
 
   100% {

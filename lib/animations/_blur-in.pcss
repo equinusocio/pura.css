@@ -1,7 +1,12 @@
 @keyframes pura-blur-in {
   0% {
-    transform: translate(var(--pura-animation-offset-x, 0), var(--pura-animation-offset-y, 800%)) scale(0.2, 2.5);
-    transform-origin: 50% 50%;
+    transform:
+      translate(
+        var(--pura-animation-x-from, 0),
+        var(--pura-animation-y-from, 800%)
+      )
+      scale(0.2, 2.5);
+    transform-origin: 50%;
     filter: blur(20px);
     opacity: 0;
   }
@@ -15,6 +20,7 @@
 }
 
 [data-pura='blur-in'] {
+  will-change: filter;
   animation-name: pura-blur-in;
   animation-timing-function: var(--pura-timing-function, env(--decelerate-curve));
   animation-direction: alternate;
