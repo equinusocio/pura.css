@@ -11,6 +11,6 @@
 [data-pura='spin'] {
   animation-name: pura-spin;
   animation-direction: var(--pura-animation-direction, unset);
-  animation-timing-function: var(--pura-timing-function, $standard-curve);
+  animation-timing-function: var(--pura-timing-function, env(--standard-curve));
   animation-iteration-count: var(--pura-iteration-count, infinite);
 }

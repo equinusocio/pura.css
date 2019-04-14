@@ -1,4 +1,4 @@
-module.exports = (ctx) => ({
+module.exports = () => ({
   plugins: {
     'stylelint': {},
     'postcss-easy-import': {
@@ -6,14 +6,14 @@ module.exports = (ctx) => ({
       extensions: '.pcss',
       plugins: [require('stylelint')()]
     },
-    'postcss-advanced-variables': {
-      'disable': '@mixin, @include, @content, @each, @else, @if, @for'
-    },
     'postcss-preset-env': {
       stage: 0,
       autoprefixer: {
         grid: true
-      }
+      },
+      importFrom: [
+        'lib/env-variables.json'
+      ]
     },
     'cssnano': { preset: 'advanced' },
     'postcss-reporter': { clearReportedMessages: true }

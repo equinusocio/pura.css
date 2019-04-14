@@ -11,7 +11,7 @@
 
 [data-pura='flash'] {
   animation-name: pura-flash;
-  animation-timing-function: var(--pura-timing-function, $standard-curve);
+  animation-timing-function: var(--pura-timing-function, env(--standard-curve));
   animation-direction: alternate;
   animation-iteration-count: var(--pura-iteration-count, infinite);
 }

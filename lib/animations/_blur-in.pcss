@@ -16,7 +16,7 @@
 
 [data-pura='blur-in'] {
   animation-name: pura-blur-in;
-  animation-timing-function: var(--pura-timing-function, $decelerate-curve);
+  animation-timing-function: var(--pura-timing-function, env(--decelerate-curve));
   animation-direction: alternate;
   animation-iteration-count: var(--pura-iteration-count, 1);
 }

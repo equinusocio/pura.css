@@ -22,6 +22,6 @@
 
 [data-pura='shake'] {
   animation-name: pura-shake;
-  animation-timing-function: var(--pura-timing-function, $standard-curve);
+  animation-timing-function: var(--pura-timing-function, env(--standard-curve));
   animation-direction: alternate;
 }
