@@ -2,7 +2,7 @@
   "name": "pure.css",
   "version": "0.0.1",
   "description": "Pure.css is a customisable animations library based on keyframes and custom properties.",
-  "main": "dist/pura.css",
+  "main": "dist/pura.min.css",
   "engines": {
     "node": ">=10"
   },
@@ -32,8 +32,8 @@
     "stylelint-config-standard": "18.2.0"
   },
   "scripts": {
-    "css:dev": "postcss lib/pura.pcss -c postcss.config.js -o dist/pura.css --verbose -w",
-    "css:build": "postcss lib/pura.pcss -c postcss.config.js -o dist/pura.css --verbose",
+    "css:dev": "postcss lib/pura.pcss -c postcss.config.js -o dist/pura.min.css --verbose -w",
+    "css:build": "postcss lib/pura.pcss -c postcss.config.js -o dist/pura.min.css --verbose",
     "serve": "browser-sync start --config './browser-sync.js'",
     "clean": "rimraf 'dist/**/*'",
     "lint": "stylelint src/**/*.pcss",
