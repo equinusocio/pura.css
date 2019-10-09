@@ -16,7 +16,7 @@
     "README.md"
   ],
   "devDependencies": {
-    "@babel/preset-env": "7.4.3",
+    "@babel/preset-env": "7.6.3",
     "autoprefixer": "9.4.9",
     "browser-sync": "2.26.3",
     "cssnano": "4.1.10",
