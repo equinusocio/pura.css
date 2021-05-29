@@ -1,5 +1,12 @@
 @keyframes pura-blur-in {
   0% {
+    transform: none;
+    transform-origin: 50% 50%;
+    filter: none;
+    opacity: 1;
+  }
+
+  100% {
     transform:
       translate(
         var(--pura-animation-x-from, 0),
@@ -10,19 +17,12 @@
     filter: blur(20px);
     opacity: 0;
   }
-
-  100% {
-    transform: none;
-    transform-origin: 50% 50%;
-    filter: none;
-    opacity: 1;
-  }
 }
 
 [data-pura='blur-in'] {
   will-change: filter;
   animation-name: pura-blur-in;
-  animation-timing-function: var(--pura-timing-function, env(--decelerate-curve));
-  animation-direction: alternate;
+  animation-timing-function: var(--pura-timing-function, env(--accelerate-curve));
+  animation-direction: reverse;
   animation-iteration-count: var(--pura-iteration-count, 1);
 }
